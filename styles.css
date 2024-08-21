@@ -183,7 +183,8 @@ body {
 
 .card {
     flex: 1;
-    max-width: 400px;
+    width: 200px;
+    height: 270px;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 15px;
     overflow: hidden;
