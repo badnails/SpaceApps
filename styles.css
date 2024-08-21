@@ -73,9 +73,6 @@ body {
     transform: translateY(1px); /* Slightly depress the text on click */
 }
 
-
-
-
 /* Hero Section */
 .hero {
     position: sticky;
