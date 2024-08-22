@@ -9,7 +9,7 @@ body {
 /* Navbar Styles */
 .navbar {
     position: fixed;
-    top: 0;
+    top: -100px;
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
     padding: 1rem 2rem;
@@ -149,9 +149,11 @@ body {
 
 /* Cards Background Section */
 .cards-background {
-    position: relative;
+    position: sticky;
+    top: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1;
@@ -168,6 +170,9 @@ body {
 }
 
 .cards-section {
+    position: absolute;
+    transition: top 0.5s ease-in-out;
+    top: 22%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,4 +212,58 @@ body {
 
 .card p {
     font-size: 1rem;
+}
+.footer{
+    clear: both;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    bottom: -200px;
+    transition: bottom 0.5s ease-in-out;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.56);
+}
+.realtime-data{
+    gap: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    background: rgba(0, 0, 0, 0.521);
+    z-index:2;
+    margin: 2%;
+    border-radius: 15px;
+    width: 30%;
+}
+.realtime-data h3{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 9px;
+}
+.realtime-data p{
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+p .number{
+    font-family:"Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+#temperature{
+    font-family:"Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.realtime-data .gas::before{
+    content: "⬆";
+    color: red; 
+    font-size: 2rem; 
 }
