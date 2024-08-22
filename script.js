@@ -26,10 +26,12 @@ window.onscroll = function() {
 
     if (scrollPosition >= documentHeight) {
         footer.style.bottom = "0";
-        cards_section.style.top="15%";  // Slide the footer up into view
+        cards_section.style.top="15%"; 
+        footer.style.zIndex=3 // Slide the footer up into view
     } else {
         footer.style.bottom = "-200px";
-        cards_section.style.top="22%" // Keep the footer hidden
+        cards_section.style.top="22%"
+        footer.style.zIndex=-1; // Keep the footer hidden
     }
 };
 
