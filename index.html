@@ -77,7 +77,7 @@
     </footer>
     <script>
         async function fetchData() {
-            const url = 'http://api.weatherapi.com/v1/forecast.json?key=3e74485a322a482685d95749242208&q=Dhaka&days=1&aqi=no&alerts=no';
+            const url = 'https://api.weatherapi.com/v1/forecast.json?key=3e74485a322a482685d95749242208&q=Dhaka&days=1&aqi=no&alerts=no';
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
