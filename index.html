@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="climatter.png" type="image/icon type">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
@@ -33,7 +32,7 @@
             </video>
             <div class="overlay">
                 <div class="text-container">
-                    <h1>Welcome to <span id="animated-text"></span></h1>
+                    <h1>Welcome to <span id="climatter-text"></span></h1>
                     <p>Explore the impacts of climate change through our interactive stories.</p>
                 </div>                
             </div>
@@ -64,38 +63,17 @@
     <footer class="footer">
         <div class="realtime-data">
             <h3>CO<sub>2</sub>(Carbon Dioxide)</h3>
-            <p class="gas"><span class="number">426</span> ppm</p>
+            <p class="gas"><span id="co2"></span> ppm</p>
         </div>
         <div class="realtime-data">
             <h3>CH<sub>4</sub>(Methane)</h3>
-            <p class="gas"><span class="number">1929</span> ppb</p>
+            <p class="gas"><span id="ch4"></span> ppb</p>
         </div>
         <div class="realtime-data">
             <h3>Temperature</h3>
-            <p><span id="temperature">...</span><sup>°C</sup></p>
+            <p><span id="temp">...</span><sup>°C</sup></p>
         </div>
     </footer>
-    <script>
-        async function fetchData() {
-            const url = 'https://api.weatherapi.com/v1/forecast.json?key=3e74485a322a482685d95749242208&q=Dhaka&days=1&aqi=no&alerts=no';
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    const temperature = data.current.temp_c;
-
-                    // You can now update your HTML or use this data in other ways
-                    document.getElementById('temperature').innerText = temperature;
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-
-        }
-
-        // Fetch data every 10 minutes
-        fetchData();
-        setInterval(fetchData, 600000); 
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
