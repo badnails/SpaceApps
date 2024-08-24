@@ -98,7 +98,7 @@ window.addEventListener('scroll', function() {
             footer.style.bottom = "0";
             cards_section.style.top = "15%";
         } else {
-            footer.style.bottom = "-200px";
+            footer.style.bottom = "-1000px";
             cards_section.style.top = "22%";
         }
     },);
